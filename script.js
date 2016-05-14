@@ -2,6 +2,7 @@ function myCtrl($scope){
   $scope.user = {name: "", sex: "",age:"",street:"",landmark:"",pincode:"",
                 state:"",country:"",office:"",mobile:"",email:"" };
   $scope.users = [];
+  //save function
 
 $scope.save = function(){
   $scope.users.push($scope.user);
