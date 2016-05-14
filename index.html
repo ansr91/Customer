@@ -1,8 +1,8 @@
 <!Doctype html>
 <html lang = "en">
 <head>
-  <script type="text/javascript" src="assets/lib/angular.min.js"></script>
-  <link href="assets/css/style.css" rel='stylesheet'/>
+  <script type="text/javascript" src="angular.min.js"></script>
+  <link href="style.css" rel='stylesheet'/>
   <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel='stylesheet' />
 </head>
 
@@ -30,10 +30,12 @@
       <hr>
       <p>EMAIL </p>   :<input type ="email"   ng-model="user.email" required/><br>
       <hr>
-                <input type = "button" class="btn" value = "Save" ng-click = "save()";
+                <input type = "button" class="btn" value = "Save" ng-click = "save()"/>
+                <input type = "button" class="btn" value = "Show" ng-click="show()"/>
+                <input type =  "button" class="btn" value ="Cancel"ng-click="reset()"/>
     </form>
     </div>
 
-<script src = "assets/js/script.js"></script>
+<script src = "script.js"></script>
 </body>
 </html>
