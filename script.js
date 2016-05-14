@@ -1,20 +1,14 @@
 function myCtrl($scope){
-  $scope.user = [{name: "", sex: "",age:"",street:"",landmark:"",pincode:"",
-                state:"",country:"",office:"",mobile:"",email:"" }];
-
+  $scope.user = {name: "", sex: "",age:"",street:"",landmark:"",pincode:"",
+                state:"",country:"",office:"",mobile:"",email:"" };
+  $scope.users = [];
 
 $scope.save = function(){
-  window.localStorage.setItem("user1",JSON.stringify($scope.user));
-  $scope.user = [];
+  $scope.users.push($scope.user);
+  window.localStorage.setItem("users",JSON.stringify($scope.users));
+  $scope.user = {name: "", sex: "",age:"",street:"",landmark:"",pincode:"",
+                state:"",country:"",office:"",mobile:"",email:"" };
   alert("saved");
-};
 
-$scope.reset = function(){
-  $scope.user = "";
-};
-
-$scope.show = function(){
-  var obj = window.localStorage.getItem("user1");
-   $scope.user = JSON.parse(obj);
-};
+  };
 }
