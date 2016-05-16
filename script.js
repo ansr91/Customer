@@ -18,10 +18,18 @@ function myCtrl($scope) {
       email: ""
     };
     alert("saved");
-    reset();
+      reset();
   };
-
+show();
 reset();
+
+
+ function show() {
+  var users = window.localStorage.getItem("users");
+  $scope.user= JSON.parse(users);
+    }
+
+    $scope.show = show();
 
   function reset() {
     $scope.user = {
@@ -39,9 +47,4 @@ reset();
     };
   }
   $scope.reset = reset();
-
-  $scope.show = function(){
-    var users = window.localStorage.getItem("users");
-    $scope.user= JSON.parse(users);
-      };
 }
