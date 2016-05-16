@@ -6,8 +6,8 @@ function myCtrl($scope) {
     window.localStorage.setItem("users", JSON.stringify($scope.users));
     $scope.user = {
       name: "",
-      sex: "",
-      age: "",
+      age : "",
+      sex : "",
       street: "",
       landmark: "",
       pincode: "",
@@ -21,7 +21,7 @@ function myCtrl($scope) {
     reset();
   };
 
-  reset();
+reset();
 
   function reset() {
     $scope.user = {
@@ -39,4 +39,9 @@ function myCtrl($scope) {
     };
   }
   $scope.reset = reset();
+
+  $scope.show = function(){
+    var users = window.localStorage.getItem("users");
+    $scope.user= JSON.parse(users);
+      };
 }

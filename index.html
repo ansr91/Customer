@@ -31,9 +31,38 @@
       <p>EMAIL </p>   :<input type ="email"   ng-model="user.email" required/><br>
       <hr>
                 <input type = "button" class="btn" value = "Save" ng-click = "save()"/>
-                <input type = "button" class="btn" value = "Show" ng-click="show()"/>
-                <input type =  "button" class="btn" value ="Cancel"ng-click="reset()"/>
+                <input type =  "button" class="btn" value ="Cancel"ng-click="reset()"/><br>
+                <input type ="button" class="btn" value="Show"ng-click="show()"/><br>
+
     </form>
+    <table style = "width: 100%">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Street</th>
+        <th>Landmark</th>
+        <th>Pimcode</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Office</th>
+        <th>Mobile</th>
+        <th>Email</th>
+      </tr>
+      <tr ng-repeat = "user in users">
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.sex}}</td>
+        <td>{{user.street}}</td>
+        <td>{{user.landmark}}</td>
+        <td>{{user.pincode}}</td>
+        <td>{{user.state}}</td>
+        <td>{{user.Country}}</td>
+        <td>{{user.office}}</td>
+        <td>{{user.mobile}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    </table>
     </div>
 
 <script src = "script.js"></script>
