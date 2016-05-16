@@ -1,8 +1,8 @@
 <!Doctype html>
 <html lang = "en">
 <head>
-  <script type="text/javascript" src="assets/lib/angular.min.js"></script>
-  <link href="assets/css/style.css" rel='stylesheet'/>
+  <script type="text/javascript" src="angular.min.js"></script>
+  <link href="style.css" rel='stylesheet'/>
   <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel='stylesheet' />
 </head>
 
@@ -14,8 +14,8 @@
   <form id = para>
     Name  :<input type = "text" ng-model ="user.name" required/><br>
     AGE   :<input type ="number" ng-model ="user.age" required/><br>
-    SEX   :<input type ="radio"  ng-model ="user.male" value=male />MALE
-           <input type ="radio"  ng-model ="user.female" value=female/>FEMALE</br>
+    SEX   :<input type ="radio"  ng-model ="user.sex" value=male />MALE
+           <input type ="radio"  ng-model ="user.sex" value=female/>FEMALE</br>
     <hr>
     <p> ADDRESS </P><br>
       STREET   :<input type ="text" ng-model="user.street" required/><br>
@@ -30,10 +30,41 @@
       <hr>
       <p>EMAIL </p>   :<input type ="email"   ng-model="user.email" required/><br>
       <hr>
-                <input type = "button" class="btn" value = "Save" ng-click = "save()";
+                <input type = "button" class="btn" value = "Save" ng-click = "save()"/>
+                <input type =  "button" class="btn" value ="Cancel"ng-click="reset()"/><br>
+                <input type ="button" class="btn" value="Show"ng-click="show()"/><br>
+
     </form>
+    <table style = "width: 100%">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Street</th>
+        <th>Landmark</th>
+        <th>Pincode</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Office</th>
+        <th>Mobile</th>
+        <th>Email</th>
+      </tr>
+      <tr ng-repeat = "user in users">
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.sex}}</td>
+        <td>{{user.street}}</td>
+        <td>{{user.landmark}}</td>
+        <td>{{user.pincode}}</td>
+        <td>{{user.state}}</td>
+        <td>{{user.Country}}</td>
+        <td>{{user.office}}</td>
+        <td>{{user.mobile}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    </table>
     </div>
 
-<script src = "assets/js/script.js"></script>
+<script src = "script.js"></script>
 </body>
 </html>
