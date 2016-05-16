@@ -4,19 +4,7 @@ function myCtrl($scope) {
   $scope.save = function() {
     $scope.users.push($scope.user);
     window.localStorage.setItem("users", JSON.stringify($scope.users));
-    $scope.user = {
-      name: "",
-      age : "",
-      sex : "",
-      street: "",
-      landmark: "",
-      pincode: "",
-      state: "",
-      country: "",
-      office: "",
-      mobile: "",
-      email: ""
-    };
+  
     alert("saved");
       reset();
   };
@@ -25,8 +13,8 @@ reset();
 
 
  function show() {
-  var users = window.localStorage.getItem("users");
-  $scope.user= JSON.parse(users);
+  var user = window.localStorage.getItem("users");
+  $scope.users= JSON.parse(user);
     }
 
     $scope.show = show();
